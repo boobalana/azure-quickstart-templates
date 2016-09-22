@@ -7,6 +7,7 @@
       "defaultValue": "westus",
       "allowedValues": [
         "westus",
+        "eastus2",
         "eastus",
         "centralus"
       ],
