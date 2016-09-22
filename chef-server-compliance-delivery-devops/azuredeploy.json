@@ -258,7 +258,7 @@
       "program": "p2p",
       "project": "Chef"
     },
-    "chefServerScriptUrl": "[concat(parameters('baseUrll'),'/scripts/chefserver.sh')]",
+    "chefServerScriptUrl": "https://raw.githubusercontent.com/boobalana/azure-quickstart-templates/master/chef-server-compliance-delivery-devops/scripts/chefserver.sh",
     "chefprefix": "",
     "uniqueString": "[uniquestring(resourceGroup().id)]",
     "keyName": "validatorkey",
