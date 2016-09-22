@@ -188,6 +188,14 @@
         "description": "ChefEnvironments unique public DNS prefix"
       }
     },
+    "baseUrll": {
+      "type": "string",
+      "metadata": {
+        "description": "The base URL for dependent deployment files",
+        "artifactsBaseUrl": ""
+      },
+      "defaultValue": "https://raw.githubusercontent.com/boobalana/azure-quickstart-templates/master/chef-server-compliance-delivery-devops"
+    },  
     "baseUrl": {
       "type": "string",
       "metadata": {
@@ -250,7 +258,7 @@
       "program": "p2p",
       "project": "Chef"
     },
-    "chefServerScriptUrl": "[concat(parameters('baseUrl'),'/scripts/chefserver.sh')]",
+    "chefServerScriptUrl": "[concat(parameters('baseUrll'),'/scripts/chefserver.sh')]",
     "chefprefix": "",
     "uniqueString": "[uniquestring(resourceGroup().id)]",
     "keyName": "validatorkey",
