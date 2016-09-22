@@ -35,6 +35,8 @@ curl https://raw.githubusercontent.com/boobalana/bbrepo1/delivery-branch/id_rsa.
 
 sudo rm /etc/apt/sources.list.d/chef-stable.list
 sudo wget  https://packages.chef.io/stable/ubuntu/14.04/chef-server-core_12.8.0-1_amd64.deb -O /tmp/chef-server-core_12.8.0-1_amd64.deb
+sudo sed -i -e 's/aio/server/g' /etc/chef-marketplace/marketplace.rb
+sudo sed -i -e 's/marketplace/standalone/g' /etc/opscode/chef-server.rb
 sudo dpkg -i /tmp/chef-server-core_12.8.0-1_amd64.deb
 sudo chef-server-ctl upgrade
 sudo chef-server-ctl start
